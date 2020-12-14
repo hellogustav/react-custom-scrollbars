@@ -1174,7 +1174,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            var viewStyle = _extends({}, _styles.viewStyleDefault, {
 	                // Hide scrollbars by setting a negative margin
-	                id: id,
 	                marginRight: scrollbarWidth ? -scrollbarWidth : 0,
 	                marginBottom: scrollbarWidth ? -scrollbarWidth : 0
 	            }, autoHeight && _extends({}, _styles.viewStyleAutoHeight, {
@@ -1203,7 +1202,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _this7.container = _ref3;
 	                } }), [(0, _react.cloneElement)(renderView({ style: viewStyle }), { key: 'view', ref: function ref(_ref4) {
 	                    _this7.view = _ref4;
-	                } }, children), (0, _react.cloneElement)(renderTrackHorizontal({ style: trackHorizontalStyle }), { key: 'trackHorizontal', ref: function ref(_ref5) {
+	                }, id: id }, children), (0, _react.cloneElement)(renderTrackHorizontal({ style: trackHorizontalStyle }), { key: 'trackHorizontal', ref: function ref(_ref5) {
 	                    _this7.trackHorizontal = _ref5;
 	                } }, (0, _react.cloneElement)(renderThumbHorizontal({ style: _styles.thumbHorizontalStyleDefault }), { ref: function ref(_ref6) {
 	                    _this7.thumbHorizontal = _ref6;

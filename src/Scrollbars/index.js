@@ -528,7 +528,6 @@ export default class Scrollbars extends Component {
         const viewStyle = {
             ...viewStyleDefault,
             // Hide scrollbars by setting a negative margin
-            id,
             marginRight: scrollbarWidth ? -scrollbarWidth : 0,
             marginBottom: scrollbarWidth ? -scrollbarWidth : 0,
             ...(autoHeight && {
@@ -574,7 +573,7 @@ export default class Scrollbars extends Component {
         return createElement(tagName, { ...props, style: containerStyle, ref: (ref) => { this.container = ref; } }, [
             cloneElement(
                 renderView({ style: viewStyle }),
-                { key: 'view', ref: (ref) => { this.view = ref; } },
+                { key: 'view', ref: (ref) => { this.view = ref; }, id },
                 children
             ),
             cloneElement(
